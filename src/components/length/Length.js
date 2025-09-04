@@ -1,23 +1,21 @@
 import React from "react";
 
-class Length extends React.Component
-{
-    constructor(props)
-    {
+class Length extends React.Component {
+    constructor(props) {
         super(props);
-        this.state = {length:10};
+        this.state = { length: 10 };
     }
 
-    increase = () =>
+    increase = () => {
+        this.setState({ length: this.state.length += 10 });
+    }
+    reset = () => 
     {
-        this.setState({length: this.state.length += 10});
-    }
-    reset = () => {
-       this.setState({length:10});
+        this.setState({ length: 10 });
     }
 
-    render(){
-        return(
+    render() {
+        return (
             <div>
                 <button onClick={this.increase}>Increase</button>
                 <button onClick={this.reset}>Reset</button>
