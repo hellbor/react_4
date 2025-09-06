@@ -8,6 +8,8 @@ import Form from './form/Form.js';
 import Range from './range/Range.js';
 import Posts from './posts/Posts.js';
 import Post from './post/Post.js';
+import DecimalToBinary from './transformation/DecimalToBinary.js';
+import DecimalToHex from './transformation/DecimalToHex.js';
 
 class App extends React.Component
 {
@@ -25,10 +27,12 @@ render() {
   return (
     <div className="App">
      <Header />
-     {/* <Hello />
-     <Length />
+     <Hello />
+     <DecimalToBinary />
+     <DecimalToHex />
+     {/* <Length /> */}
      <Form />
-     <Range /> */}
+     <Range />
      {typeof(this.state.posts)}
      <Posts posts = {this.state.posts}/>
      {/* <Post title = "Title" content = "Content" /> */}
